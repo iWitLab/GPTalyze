@@ -1,4 +1,4 @@
-# twitter-analysis-using-chatgpt
+# Using ChatGPT to analyze Twitter data
 
 [ChatGPT](https://chat.openai.com/) has recently emerged as a powerful Large Language Model (LLM), with many chatbot capabilies and innovative interaction.
 This repository contains an example to an interaction with ChatGPT to analyze Twitter posts (based on the ```gpt-3.5-turbo``` language model).
