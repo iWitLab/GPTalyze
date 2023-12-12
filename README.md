@@ -14,13 +14,45 @@ The example Jupyter notebook analyzes the publicly available Twitter dataset con
 > "As of April 2023, ChatGPT boasts about 173 million active users and 1.8 billion monthly website visits" (reported by [Nerdynav](https://nerdynav.com/chatgpt-statistics/)).
 
 These capabilities were not overlooked by the research community, who started leveraging ChatGPT for data analysis of various data sources, including textual unstructured data from social networks, such as Twitter.
-In this repository, we utilize ChatGPT's API for analysis of Twitter data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a subset of tweets and perform other NLP tasks, such as sentiment analyis and emotion detection.
+In this repository, we utilize ChatGPT's API for analysis of Twitter data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a subset of tweets and perform other Natural Language Processing (NLP) tasks, such as sentiment analyis and emotion detection.
 Specifically, we evaluate the interaction with ChatGPT on a publicly available Twitter dataset containing tweets about the COVID-19 pandemic (More information on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/)).
 Since ChatGPT is a generic tool, (almost) any textual data from other sources can also be used for evaluation.
 
 Thanks to the chat interaction of ChatGPT, the usage of this repository is quite simple.
-- First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc.
+- First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet's posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc.
 - Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (call limits may apply, depending on the account's pricing plan).
-  Here, we demonstrate a very usufll use case of text summarization, in the form of extraction of discourse topics:
+  Here, we demonstrate two very usufll use case: sentiment analysis and text summarization, in the form of extraction of discourse topics.
+### Setting up ChatGPT's API calls
+  The call to ChagGPT's API can be established as follows.
+  * The client instance is initialized using the API key that can be obtained from ChatGPT API portal (after signing up to the service).
+  ```
+  client = OpenAI(api_key=<api_key>)
+  ```
+  * The `prompt` varaible stores the user input that contains some question or request to ChatGPT. It can have several inputs, which are concatenated to a single prompt. For example, here we ask ChatGPT to classify a given tweet text to either a negative, neutral or positive sentiment.
+  ```
+  sentiments_dict = {1: "Positive", 2: "Neutral", 3: "Negative"}
+  prompt = [{"role": "user",
+               "content": "Is the sentiment of this tweet positive, neutral, or negative? Answer only with a number: 1 if {}, 2 if {}, and 3 if {}. Here is the text:".format(
+                   sentiments_dict[1],
+                   sentiments_dict[2],
+                   sentiments_dict[3])
+              },
+              {"role": "user", "content": text}]
+   ```
+  * The propmpt input is sent to the Chat using the `client.chat.completions.create` interface. We used the ChatGPT's `gpt-3.5-turbo` language model, as GPT-4 has not been released to the public yet.  The `temperature` variable controls the potential randomness in ChatGPT's answers. Here, we set it to medium (`temperature=0.5`), balancing creativity, consistency, and the accuracy of its response. A lower temperature would give less creative responses and more expected answers, which could increase the chat's accuracy.
+  ``` 
+    # Generate a response
+    chat_completion = client.chat.completions.create(
+        messages=prompt,
+        model="gpt-3.5-turbo",
+        temperature=0.5,
+        max_tokens=1024
+    )
+  ```
+  * Finally, to retrieve ChatGPT's answers, we access the prompt's `message.content` variable.
+  ```
+    response = chat_completion.choices[0].message.content
+  ```
+    - 
 
 
