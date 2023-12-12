@@ -61,6 +61,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
   1. Sentiment analysis: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label fro each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly.
 > [!NOTE]
 > The `temperature` value of the chat's model can be further fined-tuned. Setting a lower temperature can increase the accuracy of the results.
+
 ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
   3. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
      ```
