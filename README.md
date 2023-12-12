@@ -23,6 +23,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
 - Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (call limits may apply, depending on the account's pricing plan).
   
 ### Setting up ChatGPT's API calls
+----------------------------------
   The call to ChagGPT's API can be established as follows.
   * The client instance is initialized using the API key that can be obtained from ChatGPT API portal (after signing up to the service).
   ```
@@ -55,6 +56,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
     response = chat_completion.choices[0].message.content
   ```
   ### Usage Example
+  -----------------
   Here, we demonstrate two very usufll use case: sentiment analysis and text summarization, in the form of extraction of discourse topics.
   1. Sentiment analysis: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label fro each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly (setting a lower `temperature` in the chat's model would increase its accuracy and can be further fined-tuned).
      ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
