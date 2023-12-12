@@ -12,7 +12,7 @@ The example Jupyter notebook analyzes the publicly available Twitter dataset con
 > "As of April 2023, ChatGPT boasts about 173 million active users and 1.8 billion monthly website visits" (reported by [Nerdynav](https://nerdynav.com/chatgpt-statistics/)).
 
 These capabilities were not overlooked by the research community, who started leveraging ChatGPT for data analysis of various data sources, including textual unstructured data from social networks, such as Twitter.
-In this "GPTalyze" repository, we utilize ChatGPT's API for analysis of textual data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a textual corpus and perform other Natural Language Processing (NLP) tasks, such as sentiment analyis and emotion detection (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
+In this "GPTalyze" repository, we utilize ChatGPT's API for analysis of textual data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a textual corpus and perform other Natural Language Processing (NLP) tasks, such as sentiment analysis and emotion detection (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
 Specifically, we evaluate the interaction with ChatGPT on a publicly available Twitter dataset containing tweets about the COVID-19 pandemic. More information is available on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/) (filename is "Corona_NLP_train.csv").
 Since ChatGPT is a generic tool, (almost) any textual data from other sources can also be used for evaluation.
 
@@ -39,7 +39,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
               },
               {"role": "user", "content": text}]
    ```
-  * The propmpt input is sent to the Chat using the `client.chat.completions.create(...)` interface. We used the ChatGPT's `gpt-3.5-turbo` language model, as GPT-4 has not been widely released to the public yet. The `temperature` variable controls the potential randomness in ChatGPT's answers. Here, we set it to medium (`temperature=0.5`), balancing creativity, consistency, and the accuracy of its response. A lower temperature would give less creative responses and more expected answers, which could increase the chat's accuracy.
+  * The prompt input is sent to the Chat using the `client.chat.completions.create(...)` interface. We used the ChatGPT's `gpt-3.5-turbo` language model, as GPT-4 has not been widely released to the public yet. The `temperature` variable controls the potential randomness in ChatGPT's answers. Here, we set it to medium (`temperature=0.5`), balancing creativity, consistency, and the accuracy of its response. A lower temperature would give less creative responses and more expected answers, which could increase the chat's accuracy.
   ``` 
     # Generate a response
     chat_completion = client.chat.completions.create(
@@ -55,7 +55,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
   ```
   ### Usage Example
 
-  Here, we demonstrate two very usufll use cases: sentiment analysis and text summarization, in the form of extraction of discourse topics.
+  Here, we demonstrate two very useful use cases: sentiment analysis and text summarization, in the form of extraction of discourse topics.
   1. **Sentiment analysis**: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label for each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly.
   > [!NOTE]
   > The `temperature` value of the chat's model can be further fined-tuned. Setting a lower temperature can increase the accuracy of the results.
