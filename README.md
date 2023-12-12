@@ -62,7 +62,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
 
   ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
 
-  2. **Topic extraction**: We also asked ChatGPT to extract the three main topics (and their sub-topics) discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (we eyeballed the tweets manually to evaluate the recieved topics and they corresponded to the returned topics).
+  2. **Topic extraction**: We also asked ChatGPT to extract the three main topics (and their sub-topics) discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (we eyeballed the tweets manually to evaluate the received topics and they corresponded to the returned topics).
    ```
     The 3 main topics discussed in the tweets regarding COVID-19 are:
     1. COVID-19 Outbreak and Panic Buying:
@@ -80,7 +80,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
     - Donating to food banks and nonprofits to support those impacted by COVID-19
     - Providing free deliveries of essential goods to elderly individuals in need.
    ```
-   Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assinged topics to a different sample of 50 tweets.
+   Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assigned topics to a different sample of 50 tweets.
      
    ![Distibution of discourse topics (classified by Chatgpt)](./Images/chatgpt_twitter_topic_extraction.png)
 
