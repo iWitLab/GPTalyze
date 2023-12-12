@@ -57,7 +57,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
   ### Usage Example
   Here, we demonstrate two very usufll use case: sentiment analysis and text summarization, in the form of extraction of discourse topics.
   1. Sentiment analysis: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label fro each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly (setting a lower `temperature` in the chat's model would increase its accuracy and can be further fined-tuned).
-     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./images/confusion_matrix_twitter_sentiment_analysis.png)
+     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
   2. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
      ```
        The 3 main topics discussed in the tweets regarding COVID-19 are:
@@ -77,5 +77,5 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
       - Providing free deliveries of essential goods to elderly individuals in need.
      ```
      Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assinged topics to a sample of 50 tweets.
-     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./images/chatgpt_twitter_topic_extraction.png)
+     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/chatgpt_twitter_topic_extraction.png)
 
