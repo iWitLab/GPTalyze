@@ -63,25 +63,26 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
 > The `temperature` value of the chat's model can be further fined-tuned. Setting a lower temperature can increase the accuracy of the results.
 
 ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
-  3. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
-     ```
-       The 3 main topics discussed in the tweets regarding COVID-19 are:
-      1. COVID-19 Outbreak and Panic Buying:
-      - Panic buying and stock shortages due to COVID-19
-      - Encouraging people to not panic and only buy what they need
-      - Retail store closures and restrictions due to the outbreak
-      
-      2. Online Shopping and Payment Methods:
-      - Using online shopping and payment methods to prevent the spread of the virus
-      - Increased demand for online orders and potential delays
-      - Impact of COVID-19 on consumer shopping behavior
-      
-      3. Community Support and Assistance:
-      - Helping neighbors and vulnerable individuals during the outbreak
-      - Donating to food banks and nonprofits to support those impacted by COVID-19
-      - Providing free deliveries of essential goods to elderly individuals in need.
-     ```
-     Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assinged topics to a sample of 50 tweets.
+
+  2. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
+   ```
+     The 3 main topics discussed in the tweets regarding COVID-19 are:
+    1. COVID-19 Outbreak and Panic Buying:
+    - Panic buying and stock shortages due to COVID-19
+    - Encouraging people to not panic and only buy what they need
+    - Retail store closures and restrictions due to the outbreak
+    
+    2. Online Shopping and Payment Methods:
+    - Using online shopping and payment methods to prevent the spread of the virus
+    - Increased demand for online orders and potential delays
+    - Impact of COVID-19 on consumer shopping behavior
+    
+    3. Community Support and Assistance:
+    - Helping neighbors and vulnerable individuals during the outbreak
+    - Donating to food banks and nonprofits to support those impacted by COVID-19
+    - Providing free deliveries of essential goods to elderly individuals in need.
+   ```
+   Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assinged topics to a sample of 50 tweets.
      
-     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/chatgpt_twitter_topic_extraction.png)
+   ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/chatgpt_twitter_topic_extraction.png)
 
