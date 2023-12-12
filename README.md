@@ -77,5 +77,6 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
       - Providing free deliveries of essential goods to elderly individuals in need.
      ```
      Then, we asked the chat to classify each tweet in a different batch of tweets to one of the three main topics. Here, we plot the distribution of assinged topics to a sample of 50 tweets.
+     
      ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/chatgpt_twitter_topic_extraction.png)
 
