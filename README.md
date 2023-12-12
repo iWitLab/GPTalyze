@@ -6,7 +6,7 @@ The example Jupyter notebook analyzes the publicly available Twitter dataset con
 ## Installation and Usage
 - Install ```Python```  (Python 3.8) with Jupyter (or Jupyter-lab interface).
 - Create a virtual environment (or alternatively Anaconda environment) and install the following packages (using ```pip install <package_name>```): ```numpy```, ```pandas```, ```seaborn```, ```jupyter```, ```nltk```, ```tweepy```, ```spacy```, ```gensim```, ```pysentimiento```, ```twarc```, ```openai```, ```sklearn```.
-- Download the dataset from [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/)) and save it locally (filename is "Corona_NLP_train.csv").
+- Download the dataset from [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/) and save it locally (filename is "Corona_NLP_train.csv").
 - Run the jupyter notebook ```interact_with_chatgpt_general.ipynb```.
 
 ## Description and demonstration
@@ -23,7 +23,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
 - Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (call limits may apply, depending on the account's pricing plan).
   
 ### Setting up ChatGPT's API calls
-----------------------------------
+
   The call to ChagGPT's API can be established as follows.
   * The client instance is initialized using the API key that can be obtained from ChatGPT API portal (after signing up to the service).
   ```
@@ -56,11 +56,13 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
     response = chat_completion.choices[0].message.content
   ```
   ### Usage Example
-  -----------------
+
   Here, we demonstrate two very usufll use case: sentiment analysis and text summarization, in the form of extraction of discourse topics.
-  1. Sentiment analysis: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label fro each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly (setting a lower `temperature` in the chat's model would increase its accuracy and can be further fined-tuned).
-     ![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
-  2. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
+  1. Sentiment analysis: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label fro each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly.
+     > [!NOTE]
+     >  The `temperature` value of the chat's model can be further fined-tuned. Setting a lower temperature can increase the accuracy of the results.
+![Confusion matrix for classification of sentiment of Twitter tweets (classified by Chatgpt)](./Images/confusion_matrix_twitter_sentiment_analysis.png)
+  3. Topic extractions: We also asked ChatGPT to extract the three main topics discussed in a batch of 50 random tweets about COVID-19. This task would have been challenging to a human, but is performed in seconds by ChatGPT with impressive results (We eyeballed the tweets manually to evaluate the recieved topics and they correspond to the returned topics).
      ```
        The 3 main topics discussed in the tweets regarding COVID-19 are:
       1. COVID-19 Outbreak and Panic Buying:
