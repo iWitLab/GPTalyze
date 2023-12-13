@@ -1,6 +1,6 @@
 # **GPTalyze** - Text Snippet Analysis with ChatGPT
 
-This repository contains a tutorial for interaction with ChatGPT to analyze short text snippets, such as Twitter posts (based on the ```gpt-3.5-turbo``` language model). Using customizable input prompts, the repository can be used as a tutorial to help data scientists perform complex Natural Language Processing (NLP) tasks leveraging ChatGPT's powerful pre-trained language model. These tasks include sentiment analysis, emotion detection and topic exptraction.
+This repository is an API for interaction with ChatGPT to analyze short text snippets, such as Twitter posts (based on the ```gpt-3.5-turbo``` language model). Using customizable input prompts, the repository can be used to help data scientists perform complex Natural Language Processing (NLP) tasks leveraging ChatGPT's powerful pre-trained language model. These tasks include sentiment analysis, emotion detection and topic exptraction.
 Taking advantage of batch processing, the use of ChatGPT with batch of input text snippets can reduce the number of API calls to ChatGPT (and hence its overall cost) and perform an analysis at a scale.
 
 ## Installation
