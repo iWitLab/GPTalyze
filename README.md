@@ -19,8 +19,8 @@ Since ChatGPT is a generic tool, (almost) any textual data from other sources ca
 Thanks to the chat interaction of ChatGPT, the usage of this repository is quite simple.
 - First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet's posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc (jupyter notebook ```prepare_twitter_data.ipynb```).
 - Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
-  > [!NOTE]
-  > API call limits may apply, depending on the pricing plan registered on your OpenAI account.
+> [!NOTE]
+> API call limits may apply, depending on the pricing plan registered on your OpenAI account.
   
 ### Setting up ChatGPT's API calls
 
