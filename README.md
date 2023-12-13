@@ -12,13 +12,15 @@ The example Jupyter notebook analyzes the publicly available Twitter dataset con
 > "As of April 2023, ChatGPT boasts about 173 million active users and 1.8 billion monthly website visits" (reported by [Nerdynav](https://nerdynav.com/chatgpt-statistics/)).
 
 These capabilities were not overlooked by the research community, who started leveraging ChatGPT for data analysis of various data sources, including textual unstructured data from social networks, such as Twitter.
-In this "GPTalyze" repository, we utilize ChatGPT's API for analysis of textual data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a textual corpus and perform other Natural Language Processing (NLP) tasks, such as sentiment analysis and emotion detection (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
+In this "GPTalyze" repository, we utilize ChatGPT's API for analysis of textual data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a textual corpus and perform other Natural Language Processing (NLP) tasks, such as sentiment analysis and emotion detection.
 Specifically, we evaluate the interaction with ChatGPT on a publicly available Twitter dataset containing tweets about the COVID-19 pandemic. More information is available on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/) (filename is "Corona_NLP_train.csv").
 Since ChatGPT is a generic tool, (almost) any textual data from other sources can also be used for evaluation.
 
 Thanks to the chat interaction of ChatGPT, the usage of this repository is quite simple.
-- First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet's posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc.
-- Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (call limits may apply, depending on the account's pricing plan).
+- First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet's posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc (jupyter notebook ```prepare_twitter_data.ipynb```).
+- Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
+  > [!NOTE]
+  > API call limits may apply, depending on the pricing plan registered on your OpenAI account.
   
 ### Setting up ChatGPT's API calls
 
@@ -55,7 +57,7 @@ Thanks to the chat interaction of ChatGPT, the usage of this repository is quite
   ```
   ### Usage Example
 
-  Here, we demonstrate two very useful use cases: sentiment analysis and text summarization, in the form of extraction of discourse topics.
+  Here, we demonstrate two very useful use cases: *sentiment analysis* and *extraction of discourse topics*.
   1. **Sentiment analysis**: We asked ChatGPT to classify each tweet in a sample of 100 tweets discussing COVID-19 to either negative, neutral or positive sentiment. Since out dataset contained a manually annotated label for each tweet, we could evaluate ChatGPT's performance. Using the following confusion matrix, we can deduce that ChatGPT was only moderate in its accuracy, classifying only ~60% of the tweets correctly.
   > [!NOTE]
   > The `temperature` value of the chat's model can be further fined-tuned. Setting a lower temperature can increase the accuracy of the results.
