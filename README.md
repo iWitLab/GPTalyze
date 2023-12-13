@@ -1,7 +1,6 @@
-# **GPTalyze** - API for short text snippet analysis with ChatGPT
+# **GPTalyze** - Text Snippet Analysis with ChatGPT
 
-This repository contains an example to an interaction with ChatGPT to analyze Twitter posts (based on the ```gpt-3.5-turbo``` language model).
-The example Jupyter notebook analyzes the publicly available Twitter dataset containing tweets about the COVID-19 pandemic (More information on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/)).
+This repository is an API for interaction with ChatGPT to analyze short text snippets, such as Twitter posts (based on the ```gpt-3.5-turbo``` language model). The Jupyter notebook analyzes the publicly available Twitter dataset containing tweets about the COVID-19 pandemic (More information on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/)).
 
 ## Installation
 - Install ```Python```  (Python 3.8) with Jupyter (or Jupyter-lab interface).
