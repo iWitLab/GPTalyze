@@ -1,6 +1,7 @@
 # **GPTalyze** - Text Snippet Analysis with ChatGPT
 
-This repository is an API for interaction with ChatGPT to analyze short text snippets, such as Twitter posts (based on the ```gpt-3.5-turbo``` language model). The Jupyter notebook analyzes the publicly available Twitter dataset containing tweets about the COVID-19 pandemic (More information on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/)).
+This repository contains a tutorial for interaction with ChatGPT to analyze short text snippets, such as Twitter posts (based on the ```gpt-3.5-turbo``` language model). Using customizable input prompts, the repository can be used as a tutorial to help data scientists perform complex Natural Language Processing (NLP) tasks leveraging ChatGPT's powerful pre-trained language model. These tasks include sentiment analysis, emotion detection and topic exptraction.
+Taking advantage of batch processing, the use of ChatGPT with batch of input text snippets can reduce the number of API calls to ChatGPT (and hence its overall cost) and perform an analysis at a scale.
 
 ## Installation
 - Install ```Python```  (Python 3.8) with Jupyter (or Jupyter-lab interface).
@@ -12,10 +13,10 @@ This repository is an API for interaction with ChatGPT to analyze short text sni
 
 These capabilities were not overlooked by the research community, who started leveraging ChatGPT for data analysis of various data sources, including textual unstructured data from social networks, such as Twitter.
 In this "GPTalyze" repository, we utilize ChatGPT's API for analysis of textual data, employing ChatGPT's zero-shot-like abilities to summarize the discussed topics in a textual corpus and perform other Natural Language Processing (NLP) tasks, such as sentiment analysis and emotion detection.
-Specifically, we evaluate the interaction with ChatGPT on a publicly available Twitter dataset containing tweets about the COVID-19 pandemic. More information is available on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/) (filename is "Corona_NLP_train.csv").
+As an example, we evaluate the interaction with ChatGPT on a publicly available Twitter dataset containing tweets about the COVID-19 pandemic. More information is available on the dataset's page at [Kaggle](https://www.kaggle.com/datasets/datatattle/covid-19-nlp-text-classification/) (filename is "Corona_NLP_train.csv").
 Since ChatGPT is a generic tool, (almost) any textual data from other sources can also be used for evaluation.
 
-Thanks to the chat interaction of ChatGPT, the usage of this repository is quite simple.
+Thanks to the chat interaction of ChatGPT, the usage is quite simple.
 - First, we download the textual corpus and pre-process it to be more natural for human interaction. This includes extracting the tweet's posted text, removing unnecessary URLs, removing special characters that may not be recognized by the chat etc (jupyter notebook ```prepare_twitter_data.ipynb```).
 - Once the dataset is clean, we can call ChatGPT's API with the desired task and ask it to perform it (jupyter notebook ```interact_with_chatgpt_general.ipynb```).
 > [!NOTE]
